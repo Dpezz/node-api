@@ -10,7 +10,7 @@ Required:
 
 
 ```bash
-$ cd node-api
+$ cd node-api/
 $ npm install
 $ npm start
 ```
@@ -23,4 +23,6 @@ $ ./node_modules/.bin/sequelize db:migrate:undo #rollback
 $ ./node_modules/.bin/sequelize db:seed #run seeders
 ```
 
-start server [http://localhost:3000/api](http://localhost:3000/api) :-)
+start server [http://localhost:3000/api](http://localhost:3000/api) 
+
+:-)
