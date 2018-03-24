@@ -28,6 +28,6 @@ start server [http://localhost:3000/api](http://localhost:3000/api)
 
 ## Authors
 Developed by [Daniel Jara Pezzuoli](https://www.linkedin.com/in/daniel-jara-pezzuoli-43a64a55). 
-For help, please contact the [mail](jara.pezzuoli@gmail.com).
+For help, please contact the [mail](mailto:jara.pezzuoli@gmail.com).
 
 :-)
