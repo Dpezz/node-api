@@ -1,7 +1,7 @@
 var models = require(__dirname + '/../models');
 
 exports.all = () => {
-    return models.User.all();
+    return models.User.findAll();
 };
 
 exports.find = (id) => {
