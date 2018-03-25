@@ -2,10 +2,24 @@ var bcrypt = require('bcrypt');
 
 module.exports = function (sequelize, Sequelize) {
   var User = sequelize.define('User', {
-    firstName: Sequelize.STRING,
-    lastName: Sequelize.STRING,
-    email: Sequelize.STRING,
-    password: Sequelize.STRING,
+    firstName: {
+      type: Sequelize.STRING,
+      allowNull: false,
+    },
+    lastName: {
+      type: Sequelize.STRING,
+      allowNull: false,
+    },
+    email: {
+      type: Sequelize.STRING,
+      validate: {
+        isEmail: true
+      }
+    },
+    password: {
+      type: Sequelize.STRING,
+      allowNull: false,
+    },
   });
 
   User.associate = function (models) {

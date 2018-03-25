@@ -1,3 +1,4 @@
+var Sequelize = require('sequelize');
 var models = require(__dirname + '/../models');
 var repositories = require('../repositories/');
 
@@ -9,8 +10,14 @@ exports.all = (req, res) => {
 
 exports.store = (req, res) => {
     models.User.create(req.body).then(response => {
-        res.send(response)
-    })
+            res.send(response)
+        })
+        .catch(Sequelize.ValidationError, err => {
+            res.send(err)
+        })
+        .catch(err => {
+            res.send(err)
+        });
 };
 
 exports.show = (req, res) => {
@@ -22,8 +29,14 @@ exports.show = (req, res) => {
 exports.update = (req, res) => {
     repositories.user.find(req.params.id).then(user => {
         user.update(req.body).then(response => {
-            res.send(response)
-        })
+                res.send(response)
+            })
+            .catch(Sequelize.ValidationError, err => {
+                res.send(err)
+            })
+            .catch(err => {
+                res.send(err)
+            });
     })
 };
 
