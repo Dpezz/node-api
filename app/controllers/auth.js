@@ -21,7 +21,9 @@ exports.token = function (req, res) {
                         email: user.email,
                         firstName: user.firstName,
                         id: user.id,
-                    }, config.secret)
+                    }, config.secret, {
+                        expiresIn: "7d",
+                    })
                 });
             }
         }

@@ -1,7 +1,11 @@
 var express = require('express'),
     router = express.Router(),
+    cors = require('cors'),
     ctrl = require(__dirname + '/../app/'),
     mw = require(__dirname + '/../app/middleware/auth');
+
+
+router.use(cors());
 
 // index
 router.get('/', function (req, res) {
