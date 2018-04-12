@@ -8,7 +8,6 @@ Required:
 * nodejs
 * mySQL
 
-
 ```bash
 $ cd node-api/
 $ npm install
